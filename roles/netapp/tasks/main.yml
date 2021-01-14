@@ -1,0 +1,12 @@
+- name: Create SVM
+  na_ontap_svm:
+    state: present
+    name: "{{ vserver }}"
+    root_volume: "{{ vserver}}_root"
+    root_volume_aggregate: aggr1
+    root_volume_security_style: unix
+    hostname: “{{ hostname }}”
+    username: “{{ username }}”
+    password: “{{ password }}”
+    https: true
+    validate_certs: false

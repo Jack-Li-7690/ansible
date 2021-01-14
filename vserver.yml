@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  collections:
+    - netapp.ontap
+  gather_facts: false
+  vars:
+    login: &login
+      hostname: “{{ hostname }}”
+      username: “{{ username }}”
+      password: “{{ password }}”
+      https: true
+      validate_certs: false
+  roles:
+   - role: netapp
