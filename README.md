@@ -1,21 +1,19 @@
 # ansible
-
-簡易的ansible 教學
-
-階層概念
-
-workspace
-├── ansible.cfg
-├── inventory
-├── playbook.yml
-└── roles
+### 簡易的ansible 教學
+>#### 階層概念
+```
+workspace  
+├── ansible.cfg  
+├── inventory  
+├── playbook.yml  
+└── roles  
     |── os-initial 
     │   └── tasks
     │       └── main.yml
     └── vote-dapp
         └── tasks
             └── main.yml
-
+```
 執行語法： ansible-playbook  -i nginx.yml
 
 
