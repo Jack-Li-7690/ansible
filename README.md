@@ -14,7 +14,7 @@ workspace
         └── tasks
             └── main.yml
 ```
-執行語法： ansible-playbook  -i nginx.yml
+執行語法： ansible-playbook  -i invetory/host playbook.yml
 
 
 

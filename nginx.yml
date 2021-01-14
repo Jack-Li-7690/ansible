@@ -1,5 +1,0 @@
-- hosts: target
-  become: true
-  roles:
-   - role: geerlingguy.nginx 
-   - role: stop.nginx
