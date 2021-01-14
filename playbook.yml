@@ -1,0 +1,8 @@
+---
+- hosts: target
+  become: true
+  # tasks:
+  #   - name: hello world
+  #     command: /usr/bin/wall hello world
+   roles:
+    - role: 
