@@ -1,0 +1,5 @@
+# update user password
+- name: Ensure user bob is present
+  win_user:
+    name: ansible
+    password: "!QAZ2wsx"

@@ -1,0 +1,4 @@
+#initial hostname
+- name: change hostanme
+  hostname:
+    name: "{{ hostname }}"

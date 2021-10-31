@@ -1,0 +1,9 @@
+---
+ansible_connection: psrp
+
+ansible_psrp_auth: basic
+ansible_psrp_protocol: http
+ansible_psrp_message_encription: never
+        
+ansible_user: administrator
+ansible_password: P@ssw0rd

@@ -1,0 +1,14 @@
+#stop firewalld servevice 
+- name : stop firewalld service
+  service:
+    name: firewalld 
+    state: stopped
+    enabled: False 
+
+#setselinux disable 
+- selinux:
+    state: disabled
+
+# reboot
+- name: reboot 
+  reboot:

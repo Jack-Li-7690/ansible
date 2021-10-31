@@ -1,0 +1,6 @@
+---
+- hosts: windows
+  roles:
+#    - { role: win_update_pass }
+    - { role: win_change_ip }
+#    - { role: win_hostname }

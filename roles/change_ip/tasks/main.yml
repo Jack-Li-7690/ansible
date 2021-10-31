@@ -1,0 +1,13 @@
+#initial hostname
+  - name: change ipaddress
+    replace:
+      path: /etc/sysconfig/network-scripts/ifcfg-ens192
+      regexp:  '^IPADDR.*'
+      replace: 'IPADDR="{{ newip }}"'
+  - name: change gateway 
+    replace:
+      path: /etc/sysconfig/network-scripts/ifcfg-ens192
+      regexp:  '^GATEWAY.*'
+      replace: "GATEWAY=10.2.3.254"
+  - name: restart network
+    service: name=network state=restarted
