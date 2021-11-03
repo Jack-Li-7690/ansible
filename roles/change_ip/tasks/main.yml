@@ -8,6 +8,6 @@
     replace:
       path: /etc/sysconfig/network-scripts/ifcfg-ens192
       regexp:  '^GATEWAY.*'
-      replace: "GATEWAY=10.2.3.254"
+      replace: "GATEWAY=10.2.14.254"
   - name: restart network
     service: name=network state=restarted

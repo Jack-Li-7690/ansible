@@ -1,9 +1,10 @@
 [linux]
-10.2.14.113 hostname=test13 newip=10.2.3.13
-#10.2.3.14 hostname=test14
-#10.2.3.15 hostname=test15
+10.2.3.13 hostname=change13 newip=10.2.14.13
+10.2.3.14 hostname=change14 newip=10.2.14.14
+10.2.3.15 hostname=change15 newip=10.2.14.15
 [windows]
-10.2.3.16 hostname=test16 newip=10.2.3.116
+10.2.3.16 hostname=change16 newip=10.2.3.116
+10.2.3.17 hostname=change17 newip=10.2.3.117
 
 [windows:vars]
 ansible_user=administrator

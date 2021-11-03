@@ -1,7 +1,7 @@
 ---
 - hosts: linux
   roles:
+    - { role: authried_keys, become: yes }
+    - { role: hostname, become: yes }
+    - { role: update_password, become: yes }
     - { role: change_ip, become: yes }
-#    - { role: authried_keys, become: yes }
-#    - { role: hostname, become: yes }
-#    - { role: update_password, become: yes }

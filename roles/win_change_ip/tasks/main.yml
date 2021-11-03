@@ -1,5 +1,7 @@
 - name: Set up static IP address
-  win_shell: "Set-NetIPAddress -InterfaceIndex 8 -IPAddress 10.2.14.116 Set-NetIPInterface -InterfaceAlias Ethernet0  -DefaultGatewayi 10.2.14.254"
+  win_shell: "Remove-NetRoute -InterfaceIndex 3 -NextHop 10.2.3.254 -Confirm:$false | New-NetRoute -InterfaceIndex 3 -DestinationPrefix '0.0.0.0/0' -AddressFamily IPv4 -NextHop '10.2.14.254' -RouteMetric 0"
+  win_shell: "Get-NetIpAddress -InterfaceAlias 'Ethernet0' | New-NetIpAddress -IpAddress 10.2.14.10 -PrefixLength 24"
+  win_shell: "Remove-NetIPAddress -IPAddress 10.2.3.16 -Confirm:$false"
   async: 100 # Using "fire-and-forget" asynchronous execution for this task, otherwise it will always fail and timeout
   poll: 0
 

@@ -11,22 +11,10 @@
       password: '1234Asdf'
       name: '{{ item }}'
       label: "Network adapter 1"
-      network_name: "Null"
+      network_name: "VLAN214-Louis.Lee"
       state: present
     delegate_to: localhost
     loop:
        - test01
        - test02
        - test03
-#  tasks:
-#  - name: Change network
-#    community.vmware.vmware_guest_network:
-#      validate_certs: no
-#      hostname: '10.3.2.100'
-#      username: 'jack.li@yottatech.com.tw'
-#      password: '1234Asdf'
-#      name: test03
-#      label: "Network adapter 1"
-#      network_name: "Null"
-#      state: present
-#    delegate_to: localhost
